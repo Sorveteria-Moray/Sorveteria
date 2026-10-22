@@ -6,7 +6,7 @@ import frutas from '../assets/frutas.jpg'
 import flocos from '../assets/flocos.jpg'
 
 const Home = () => {
-  const games = [
+  const sorvetes = [
     { id: 1, titulo: "Sorvete de Chocolate Belga", preco: "R$ 49,90", imagem: belga },
     { id: 2, titulo: "Sorvete de Baunilha", preco: "R$ 39,90", imagem: baunilha },
     { id: 3, titulo: "Sorvete de Frutas Vermelhas", preco: "R$ 35,90", imagem: frutas },
@@ -22,11 +22,11 @@ const Home = () => {
         <h2 className="titulo text-3xl font-bold text-[#5C493B] mb-8 animate-[fadeIn_0.8s_ease-out]">Sorvetes em Destaque</h2>
 
         <section className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6">
-          {sorvetes.map((game, index) => (
+          {sorvetes.map((sorvete, index) => (
             <div key={game.id} className="animate-[fadeInUp_0.6s_ease-out_both]" style={{ animationDelay: `${index * 150}ms` }}>
               <Card
-                titulo={game.titulo}
-                preco={game.preco}
+                titulo={sorvete.titulo}
+                preco={sorvete.preco}
                 imagem={sorvete.imagem}
               />
             </div>
