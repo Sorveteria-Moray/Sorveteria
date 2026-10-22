@@ -15,9 +15,26 @@ const Home = () => {
 
 
   return (
-    <div>
-      
-    </div>
+    <>
+      <Carrossel />
+
+      <main className="px-[5%] mt-10 mb-16 grow bg-[#E5D5C3]">
+        <h2 className="titulo text-3xl font-bold text-[#5C493B] mb-8 animate-[fadeIn_0.8s_ease-out]">Sorvetes em Destaque</h2>
+
+        <section className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6">
+          {sorvetes.map((game, index) => (
+            <div key={game.id} className="animate-[fadeInUp_0.6s_ease-out_both]" style={{ animationDelay: `${index * 150}ms` }}>
+              <Card
+                titulo={game.titulo}
+                preco={game.preco}
+                imagem={sorvete.imagem}
+              />
+            </div>
+          ))}
+        </section>
+      </main>
+
+    </>
   )
 }
 

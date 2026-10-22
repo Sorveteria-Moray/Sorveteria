@@ -1,0 +1,164 @@
+:root {
+    --color-primary: #A88970;
+    --bg: #F7F3EB;
+    --text-color: #5C493B;
+    --btn-color: #A88970;
+    --header-bg: #F7F3EB;
+    --color-secondary: #E5D5C3;
+    --color-hover: #8F7059;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-color);
+}
+
+main {
+    margin-top: 50px !important;
+}
+
+.titulo {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    padding-left: 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.titulo:hover {
+    color: var(--color-primary);
+    cursor: default;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carrossel {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.carrossel-slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.slide.ativo {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-texto {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    color: #fff;
+    background: rgba(90, 70, 50, 0.65);
+    padding: 15px 25px;
+    border-radius: 10px;
+    max-width: 450px;
+}
+
+.slide-texto h2 {
+    margin: 0 0 5px;
+    font-size: 28px;
+}
+
+.slide-texto p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: rgba(247, 241, 232, 0.85);
+    color: #5a4632;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.seta:hover {
+    background: #a98a6f;
+    color: #fff;
+}
+
+.seta.esquerda {
+    left: 20px;
+}
+
+.seta.direita {
+    right: 20px;
+}
+
+.indicadores {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    gap: 8px;
+}
+
+.indicadores button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(247, 241, 232, 0.6);
+    cursor: pointer;
+    padding: 0;
+}
+
+.indicadores button.ativo {
+    background: #a98a6f;
+}
