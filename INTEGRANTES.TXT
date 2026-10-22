@@ -1,0 +1,8 @@
+| Nome | RM |
+| ---- | -- |
+| Matheus Medeiros da Cunha     | RM 572780 |
+| Gustavo Ferreira Silva        | RM 571675 |
+| Felipe Ricardo Moreira Aguiar | RM 573410 |  TEACH LEAD ELE ESTÀ SEM O GITHUB DEU O ULTIMO COMMIT
+
+---
+https://github.com/Sorveteria-Moray/Sorveteria
