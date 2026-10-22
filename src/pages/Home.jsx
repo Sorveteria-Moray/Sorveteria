@@ -23,7 +23,7 @@ const Home = () => {
 
         <section className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6">
           {sorvetes.map((sorvete, index) => (
-            <div key={game.id} className="animate-[fadeInUp_0.6s_ease-out_both]" style={{ animationDelay: `${index * 150}ms` }}>
+            <div key={sorvete.id} className="animate-[fadeInUp_0.6s_ease-out_both]" style={{ animationDelay: `${index * 150}ms` }}>
               <Card
                 titulo={sorvete.titulo}
                 preco={sorvete.preco}
